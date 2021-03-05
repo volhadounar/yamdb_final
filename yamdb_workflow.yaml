@@ -60,8 +60,8 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:v1.2021
-            sudo docker-compose -f home/${{ secrets.USER }}/web/docker-compose.yaml down 
-            sudo docker-compose -f home/${{ secrets.USER }}/web/docker-compose.yaml up -d
+            sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml down 
+            sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml up -d
 
 
   send_message:
