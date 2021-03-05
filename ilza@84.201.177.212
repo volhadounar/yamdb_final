@@ -17,6 +17,8 @@ services:
     image: volhadounar87/yamdb_final:v1.2021
     restart: always
     container_name: drf_yamdb_web
+    volumes:
+      - ./docker-compose.yaml:./
     ports:
       - "8000:8000"
     depends_on:
