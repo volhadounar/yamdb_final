@@ -6,7 +6,7 @@ Service Yamdb
 In a team with my colleagues we have written service – databases of reviewing films, books, music and
 REST API for it. My role included registration and authentication system, access rights, work with a token, e-mail confirmation system.
 
-The project is deployed at a remote server, try http://84.201.177.212/redoc/ or http://ilza-yamdb.tk/redoc/, or http://www.ilza-yamdb.tk/redoc/.
+The project is deployed at a remote server, try http://84.201.177.212/redoc/ or http://ilza-yamdb.tk/redoc/, or http://www.ilza-yamdb.tk/redoc/. Follow admin site http://ilza-yamdb.tk/admin/ using credentials: email:admin@live.com, password:admin.
 
 Tech stack: Python3, Django Rest Framework, HTTP, HTTPS, PostgreSQL, Gunicorn, Nginx, Linux, Docker, Postman, Visual Studio Code, Yandex Cloud, GitHubActions.
 
