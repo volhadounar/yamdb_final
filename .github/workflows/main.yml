@@ -44,7 +44,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final87:v1.2021
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:v1.2021
 
 
   deploy:
@@ -59,13 +59,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final87:v1.2021
-            sudo apt install git –y   
-            cd ilza
-            sudo git clone https://github.com/volhadounar/yamdb_final.git
-            cd yamdb_final
-            sudo docker-compose down
-            sudo docker-compose up
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:v1.2021
+            sudo docker-compose down -f ./${{ secrets.USER }}/docker-compose.yaml
+            sudo docker-compose up -f ./${{ secrets.USER }}/docker-compose.yaml
 
 
   send_message:
