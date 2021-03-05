@@ -60,6 +60,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final87:v1.2021
+            sudo apt install git –y   
             cd ilza
             sudo git clone https://github.com/volhadounar/yamdb_final.git
             cd yamdb_final
