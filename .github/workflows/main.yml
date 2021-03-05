@@ -59,7 +59,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker system prune
+            sudo docker system prune -f
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:v1.2021
             sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml down 
             sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml up -d
