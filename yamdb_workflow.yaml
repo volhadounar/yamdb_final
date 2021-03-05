@@ -63,9 +63,6 @@ jobs:
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:v1.2021
             sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml down 
             sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml up -d
-            sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml run web python manage.py migrate
-            sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml exec web echo "from django.contrib.auth import get_user_model; CustomUser = get_user_model();  CustomUser.objects.create_superuser('admin@example.co.uk', 'admin')"
-
 
   send_message:
     runs-on: ubuntu-latest
