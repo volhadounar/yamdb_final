@@ -17,8 +17,6 @@ services:
     image: volhadounar87/yamdb_final:v1.2021
     restart: always
     container_name: drf_yamdb_web
-    ports:
-      - "8000:8000"
     depends_on:
       - db
     env_file:
