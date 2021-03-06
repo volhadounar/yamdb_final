@@ -1,5 +1,4 @@
-![run-yamdb](https://github.com/volhadounar/yamdb_final/workflows/yamdb_workflow/badge.svg)
-
+![run-yamdb](https://github.com/volhadounar/yamdb_final/actions/workflows/main.yml/badge.svg)
 Service Yamdb
 =================================
 
