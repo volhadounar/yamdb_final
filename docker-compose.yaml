@@ -2,6 +2,8 @@ version: '3.8'
 
 volumes:
   postgres_data:
+  static:
+  nginx:
 
 services:
   db:
@@ -16,8 +18,8 @@ services:
     restart: always
     container_name: drf_yamdb_web
     volumes:
-      - ./static:/code/static/
-      - ./nginx:/code/nginx/
+      - static:/code/static/
+      - nginx:/code/nginx/
     depends_on:
       - db
     env_file:
@@ -25,8 +27,8 @@ services:
   nginx:
     image: nginx:1.19-alpine
     volumes:
-      - ./nginx:/etc/nginx/conf.d/
-      - ./static:/static
+      - nginx:/etc/nginx/conf.d/
+      - static:/static/
     container_name: drf_yamdb_nginx
     ports:
       - "80:80"
