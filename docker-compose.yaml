@@ -2,8 +2,6 @@ version: '3.8'
 
 volumes:
   postgres_data:
-  nginx:
-  static:
 
 services:
   db:
@@ -17,6 +15,9 @@ services:
     image: volhadounar87/yamdb_final:v1.2021
     restart: always
     container_name: drf_yamdb_web
+    volumes:
+      - ./static:/code/static/
+      - ./nginx:/code/nginx/
     depends_on:
       - db
     env_file:

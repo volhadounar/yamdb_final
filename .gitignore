@@ -19,8 +19,6 @@ __pycache__/
 *.log
 
 media/
-static/admin/
-static/rest_framework/
 sent_emails/
 
 db.sqlite3

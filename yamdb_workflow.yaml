@@ -50,6 +50,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
@@ -63,6 +64,7 @@ jobs:
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:v1.2021
             sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml down 
             sudo docker-compose -f /home/${{ secrets.USER }}/web/docker-compose.yaml up -d
+
 
   send_message:
     runs-on: ubuntu-latest
