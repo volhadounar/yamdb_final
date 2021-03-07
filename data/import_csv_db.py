@@ -31,8 +31,8 @@ with open(csvFilename, "r", encoding='utf-8') as file:
         desc = row['description']
         first_name = row['first_name']
         last_name = row['last_name']
-        c.execute("INSERT INTO  auth_user_customuser(username, email, role, bio, first_name, last_name, password, is_superuser, is_staff, is_active, date_joined) \
-                  VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (username, email, role, desc, first_name, last_name, '111', 0, 0, 1, dt.datetime.now()))
+        #c.execute("INSERT INTO  auth_user_customuser(username, email, role, bio, first_name, last_name, password, is_superuser, is_staff, is_active, date_joined) \
+                  #VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (username, email, role, desc, first_name, last_name, '111', 0, 0, 1, dt.datetime.now()))
 
 csvFilename = 'titles.csv'
 with open(csvFilename, "r", encoding='utf-8') as file:
